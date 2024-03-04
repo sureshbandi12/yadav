@@ -1,20 +1,22 @@
 // grade calculator using switch\\
 
-var marks=35;
-if(marks>90){
-    console.log("a grdae")
-}else if(marks>70){
-    console.log("b grade")
-}else if(marks>50){
-    console.log("c grade")
-}else if(marks>36){
-    console.log("d grade")
+var marks=60;
+switch(true){
+    case marks>90 : result="a grade";
+    break;
+    case marks>75 : result ="b grade";
+    break;
+    case marks>60 : result ="c grade"
+    break;
+    case marks>45 : result  = " d grade"
+    break;
+    case marks>36 : result = " e grade"
+    break;
+    default : result="fail";
+
+
 }
-else if(marks>30){
-    console.log("e grade")
-}else{
-    console.log("fail")
-}
+console.log(result);
 
 
 
