@@ -1,13 +1,20 @@
-//Recursions\\
-function test(n){
-    if(n>0){
-        console.log(n)
-        test(n-1)
-    }
+
+
+ function fibonacci(n){
+if (n<=1){
+    return n;
+
+}else{
+    return fibonacci(n-1) + (n-2);
 }
-  
-test(10)
+ }
+ var a=10
+ for(let i=0;i<a; i++){
+    console.log(fibonacci(i));
+ }
+ 
 
 
 
-        
+
+    
