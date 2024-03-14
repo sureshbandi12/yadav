@@ -1,20 +1,19 @@
-
-
- function fibonacci(n){
-if (n<=1){
-    return n;
-
-}else{
-    return fibonacci(n-1) + (n-2);
-}
- }
- var a=10
- for(let i=0;i<a; i++){
-    console.log(fibonacci(i));
- }
- 
-
-
-
-
-    
+var movies =['salar', 'animal', 'baubali', 'pushpa', 'oye']
+movies.push ('pokiri', 'maharshi')
+movies.push ('jaanu')
+movies.push('aarya')
+console.log(movies)
+console.log(movies.length)
+movies.pop('aarya')
+console.log(movies)
+console.log(movies.length)
+movies.push('aarya')
+console.log(movies)
+movies.push('65')
+console.log(movies)
+movies.unshift('varsham')
+console.log(movies)
+movies.shift('varsham')
+console.log(movies)
+console.log(movies.slice(1,4))
+console.log(movies.length)     

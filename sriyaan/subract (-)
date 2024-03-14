@@ -1,0 +1,5 @@
+function subtractWithoutMinus (a,b){
+    return a+(-b);
+
+}let result=subtractWithoutMinus(17,5);
+console.log(result);
