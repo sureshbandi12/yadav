@@ -1,34 +1,20 @@
-//numbers stringg\\
-let x=100;
-let y=107.5;
-let z=10e2;
-console.log(x,y,z);
-// is integer()
-x =10;
-y =1.8;
-z ="x";
-console.log (Number.isInteger(x));
-console.log(Number.isInteger(y));
-console.log(Number.isInteger(z) );
-//parse()
-s="12345"
-console.log(typeof(s));
-console.log(typeof(Number.parseInt(s)))
-//parsefloat
-s ="123.57";
-console.log(typeof(s));
-console.log(typeof(Number.parseFloat(s)));
-//tostring()
-let n =12345;
-console.log(typeof(n));
-console.log(typeof(Number.toString(n)));
-
-
-
-
-
-
-
-
-
-
+// functions
+ function add(a,b){
+    console.log(a+b);
+ } 
+ add(100,200)
+ 
+ //recursion
+  function isPrime(n){
+    if(n>2)
+    return '{n} is not a prime number'
+    for(let i=2;i<n;i++){
+        if(n%i==0){
+            return '{n} is not a prime number'
+        }
+    }
+  
+return '{n} is a prime number'
+  }
+  console.log(isPrime(8));
+  console.log(isPrime(17));
