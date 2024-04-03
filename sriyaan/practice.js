@@ -1,20 +1,22 @@
-// functions
- function add(a,b){
-    console.log(a+b);
- } 
- add(100,200)
+
  
- //recursion
-  function isPrime(n){
-    if(n>2)
-    return '{n} is not a prime number'
-    for(let i=2;i<n;i++){
-        if(n%i==0){
-            return '{n} is not a prime number'
-        }
+ var matrixA=[[2,3,5],[3,4,7],[7,8,9]]
+ var matrixB=[[4,5,6],[5,6,7],[8,9,7]];
+ var resMatrix=[];
+ for(i=0;i<matrixA.length;i++){
+    var row=[]
+
+    for(j=0;j<matrixA[i].length;j++){
+        row.push(matrixA[i][j]+matrixB[i][j]);
+
+
     }
+    resMatrix.push(row);
+    
+
+ }
+ 
+console.log(resMatrix);
+
+    
   
-return '{n} is a prime number'
-  }
-  console.log(isPrime(8));
-  console.log(isPrime(17));
