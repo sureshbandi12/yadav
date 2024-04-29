@@ -1,37 +1,35 @@
-
-const express=require('express')
-const fs =require("fs/promises")
-const app = express()
-const port = 8080
-app.use(express.json())
- app.get('/',(req,res)=>{
-     res.send('hello world!')
+const express=require("express")
+const app=express()
+app.use(express.json());
+const port=3000
+app.get('/sayhello',(req,res)=>{
+    res.send('never give up')
 })
+const products=[
+    {
+        id:123,
+        name:"iphone"
+    },
+    {
+        id:213,
+        name:"vivo"
+    },
+    {
+        id:345,
+        name:"oppo"
+    }
 
- 
-app.post('/home',async (req,res)=>{
-    let userData = req.body;
     
-    
-    let file=await fs.readFile("data.json")
-    file=JSON.parse(file)
-    file.push(userData);
-    console.log(file);
-    file=JSON.stringify(file);
-    console.log(file);
-    await fs.writeFile('data.json',file)
-    app.get('/user',async(req,res)=>{
-        let file = await fs.readFile("data.json")
-        file=JSON.parse(file)
-        res.status(200).json(file)
-
-    })
-    
-    res.send('lets get biryani tonight')
+]
+app.get('/products',(req,res)=>{
+    res.json(products)
 })
-
-
-
+app.post('/addproducts',(req,res)=>{
+    const{id,name}=req.body;
+    console.log(id,name);
+    return res.send('data stored')
+})
 app.listen(port,()=>{
-    console.log(`server started on port ${port}`)
+    console.log(`listening on port ${port}`)
 })
+    
